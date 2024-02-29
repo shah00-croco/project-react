@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import AnimatedPage from '../component/animatedpage';
-import '../asset/style.css'; // Make sure to adjust the path to your CSS file
+import '../asset/style.css'; 
 
 const LoginPage: React.FC = () => {
     return (
