@@ -1,14 +1,14 @@
-.LoginPage{
-    background-color: aquamarine;
+.LoginPage {
+    background-color: rgb(201, 239, 227);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
+    font-size: 13px;
     color: white;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
 }
-
 .main-page{
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
@@ -18,8 +18,7 @@
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
-    
+    color: white;   
 }
 .main-page svg {
     position: absolute;
@@ -176,11 +175,12 @@
 
 
 .login-container {
-    background-color: aquamarine;
+    background-color: rgb(225, 252, 243);
     border-color: #282c34;
-    width: 300px; /* Adjust width as needed */
+    width: 300px; 
     padding: 20px;
     border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .login-container header {
     text-align: center;
@@ -195,18 +195,42 @@
     font-size: 14px;
     text-align: left; /* Aligns the text to the right within the width */
 }
-.login{
-    width: calc(100% - 90px);
+.login {
+    width: 100%;
     position: relative;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
     border-radius: 3px;
-    border: 1px solid #ccc;
+    border: none;
     height: 25px;
+    border: 0;
+    padding: 0;
+    z-index: 1;
+    background-color: transparent;
+    border-bottom: 2px solid #555555;
+    font: inherit;
+    font-size: 14px;
+    line-height: 30px;
+    transition: border-color 0.3s ease; /* Add a transition for smooth visual changes */
 }
+.login:focus,
+.login:focus-within { /* Add focus styles not only on focus of input but also when it's a parent of a focused element */
+    outline: 0;
+    border-color: transparent; /* Set border color to transparent when focused */
+}
+.login:active {
+    background-color: transparent; /* Change background color when clicked */
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 1s;
+    -webkit-text-fill-color: #080808 !important;
+}
+
 .login input {
     position: relative;
-     /* Adjust width as needed */
     padding: 5%;
     margin-bottom: 10px;
     border: 12px solid #ccc;
@@ -236,23 +260,20 @@
 .forgot {
     display: block;
     text-align: center;
-    color: black;
+    color: rgb(23, 32, 96);
     font-size: 12px;
     margin-top: 4%;
-}
-
-.forgot:focus {
-    color: black;
-}
-
-.forgot:active {
-    color: rgb(21, 35, 88);
+    cursor: pointer;
 }
 
 .forgot:hover {
-    color: rgb(12, 53, 202);
+    color: rgb(12, 53, 202); /* Change color on hover */
+    transition: color 0.3s ease;
 }
 
+.forgot:active {
+    color: rgb(21, 35, 88); /* Change color when active */
+}
 header{
     color: #282c34;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -276,4 +297,54 @@ header{
 
 .button-back:active {
     background-color: rgb(205, 84, 84);
+}
+
+.placeholder {
+    color: #65657b;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+  }
+
+.checkbox-label {
+    display: block;
+    margin-bottom: 5px;
+    color: black; /* Set text color to black */
+    
+}
+
+
+input[type="checkbox"]:checked + .checkbox-custom::after {
+    display: block;
+}
+
+.checkbox-text {
+    vertical-align: middle;
+    font-size: 14px; /* Adjust the font size as needed */
+    color: black; /* Set text color to black */
+    margin-bottom: 10px;
+    transform: translateY(100%);
+}
+
+.checkbox-container {
+    display: block;
+    margin-bottom: 5px;
+    color: black; /* Set text color to black */
+}
+
+.remember-me-checkbox {
+    margin-right: 8px; /* Adjust spacing as needed */
+}
+
+
+.checkbox-text {
+    vertical-align: middle;
+    font-size: 14px; /* Adjust the font size as needed */
+    color: black; /* Set text color to black */
+    transform: translateY(50%);
 }

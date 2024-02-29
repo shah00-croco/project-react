@@ -1,8 +1,9 @@
-import '../asset/style.css';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import AnimatedPage from '../component/animatedpage';
+import '../asset/style.css'; // Make sure to adjust the path to your CSS file
 
-const LoginPage = () => {
+const LoginPage: React.FC = () => {
     return (
         <div className="main-page">
             <div className="custom-shape-divider-top-1709165903">
@@ -19,20 +20,29 @@ const LoginPage = () => {
                     <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" className="shape-fill"></path>
                 </svg>
             </div>
-              
             <AnimatedPage>
-             <div className='login-container'>
-                <header>Sign In</header>
-                <form action="">
-                    <i className='text'>Username:</i><input type="text" className='login username' required/>
-                    <i className='text'>Password:</i><input type="password" className='login password' required/>
-                    <button type='button' className='button button-log'>LOGIN</button>
-                    <a href="" className='forgot'>Forgot password</a>
-                </form>
-             </div>
-             <Link to='/' className='button button-back'>BACK</Link>  
+                <div className='login-container'>
+                    <header>Sign In</header>
+                    <form action="">
+                        <input type="text" className='login username' placeholder='Username' required />
+                        <div className="password-container">
+                            <input
+                                type="password"
+                                className='login password'
+                                placeholder='Password'
+                                required
+                            />
+                        </div>
+                        <div className="checkbox-container">
+                            <input type="checkbox" id="remember-me" className="checkbox-text" />
+                            <label htmlFor="remember-me" className="checkbox-text">Remember Me</label>
+                        </div>
+                        <button type='button' className='button button-log'>LOGIN</button>
+                        <a href="" className='forgot'>Forgot password</a>
+                    </form>
+                </div>
+                <Link to='/' className='button button-back'>BACK</Link>
             </AnimatedPage>
-    
         </div>
     );
 }
