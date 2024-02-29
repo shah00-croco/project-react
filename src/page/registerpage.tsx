@@ -37,13 +37,13 @@ const Register = () => {
                         </div>
                         <div>
                             <label className="checkbox-label">
-                                <input type="checkbox" id="agreeTerms" name="agreeTerms" required />
+                                <input type="checkbox" id="agreeTerms" name="agreeTerms" className='checkbox-text' />
                                 <span className="checkbox-text">I agree to the terms and conditions</span>
                             </label>
                         </div>
                         <div>
                             <label className="checkbox-label">
-                                <input type="checkbox" id="acceptNewsletter" name="acceptNewsletter" />
+                                <input type="checkbox" id="acceptNewsletter" name="acceptNewsletter" className='checkbox-text' />
                                 <span className="checkbox-text">I accept to receive newsletters</span>
                             </label>
                         </div>

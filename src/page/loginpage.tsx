@@ -38,7 +38,7 @@ const LoginPage: React.FC = () => {
                             <label htmlFor="remember-me" className="checkbox-text">Remember Me</label>
                         </div>
                         <button type='button' className='button button-log'>LOGIN</button>
-                        <a href="" className='forgot'>Forgot password</a>
+                        <a href="" id='forgott' className='forgot'>Forgot password</a>
                     </form>
                 </div>
                 <Link to='/' className='button button-back'>BACK</Link>

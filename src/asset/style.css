@@ -314,19 +314,14 @@ header{
 .checkbox-label {
     display: block;
     margin-bottom: 5px;
-    color: black; /* Set text color to black */
+    color: black;
     
-}
-
-
-input[type="checkbox"]:checked + .checkbox-custom::after {
-    display: block;
 }
 
 .checkbox-text {
     vertical-align: middle;
-    font-size: 14px; /* Adjust the font size as needed */
-    color: black; /* Set text color to black */
+    font-size: 14px; 
+    color: black; 
     margin-bottom: 10px;
     transform: translateY(100%);
 }
@@ -334,17 +329,17 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
 .checkbox-container {
     display: block;
     margin-bottom: 5px;
-    color: black; /* Set text color to black */
+    color: black; 
 }
 
 .remember-me-checkbox {
-    margin-right: 8px; /* Adjust spacing as needed */
+    margin-right: 8px; 
 }
 
 
 .checkbox-text {
     vertical-align: middle;
-    font-size: 14px; /* Adjust the font size as needed */
-    color: black; /* Set text color to black */
+    font-size: 14px; 
+    color: black;
     transform: translateY(50%);
 }
