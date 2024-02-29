@@ -260,15 +260,18 @@ header{
 
 .button-back {
     background-color: rgb(216, 55, 55);
-    position: fixed;
+    position: flex;
     top: 10px;
     left: 3px;
+    transform: translateX(-50%);
+    margin-left: 50%;
     transition: left 0.3s ease; 
 }
 
 .button-back:hover {
     background-color: rgb(208, 30, 30);
     left: 0px;
+    top: 13px;
 }
 
 .button-back:active {
