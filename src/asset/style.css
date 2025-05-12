@@ -9,16 +9,98 @@
     color: white;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
 }
-.main-page{
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+.main-page {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;   
+    align-items: center;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.modern-background {
+    background: linear-gradient(to right, #fdfbfb, #ebedee);
+}
+
+.custom-shape-divider-top,
+.custom-shape-divider-bottom {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top {
+    top: 0;
+}
+
+.custom-shape-divider-bottom {
+    bottom: 0;
+}
+
+.shape-fill {
+    fill: #ffffff;
+}
+
+.main-content {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.main-content h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.main-content p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.button {
+    text-decoration: none;
+    padding: 0.75rem 2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.modern-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.modern-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.outlined {
+    background-color: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+}
+
+.outlined:hover {
+    background-color: #007bff;
+    color: white;
 }
 .main-page svg {
     position: absolute;
@@ -276,7 +358,6 @@ input:-webkit-autofill:active {
 }
 header{
     color: #282c34;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .button-back {
@@ -342,4 +423,28 @@ header{
     font-size: 14px; 
     color: black;
     transform: translateY(50%);
+}
+.slick-slide > div {
+    height: 100vh;
+}
+
+.slick-list, .slick-track {
+    height: 100%;
+}
+
+  /* Custom animations */
+.transition {
+    transition: all 0.3s ease-in-out;
+}
+
+.transform {
+    transform: translateZ(0);
+}
+
+.backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+}
+
+.hover\:shadow-2xl:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }

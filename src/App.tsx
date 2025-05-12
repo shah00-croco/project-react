@@ -1,22 +1,24 @@
+// src/App.tsx
+
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Removed `useLocation` import
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MainPage from './page/mainpage';
 import LoginPage from './page/loginpage';
 import Register from './page/registerpage';
-import { AnimatePresence } from 'framer-motion';
+import Layout from './component/Layout'; // Import your Layout component
 
 const App = () => {
-    return (
-      <AnimatePresence mode='wait'>
-        <Router>
-          <Routes>
-              <Route path="/" element={<MainPage/>} />
-              <Route path="/loginpage" element={<LoginPage/>} />
-              <Route path="/registerpage" element={<Register/>} />
-          </Routes>
-        </Router>
-      </AnimatePresence>
-    );
-}
+  return (
+    <Router>
+      <Layout>  {/* Wrap your routes inside Layout */}
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/loginpage" element={<LoginPage />} />
+          <Route path="/registerpage" element={<Register />} />
+        </Routes>
+      </Layout>
+    </Router>
+  );
+};
 
 export default App;
